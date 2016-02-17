@@ -18,6 +18,9 @@ module Spree
       end
 
       def ip
+        if Rails.env == 'development'
+          return '127.0.0.1'
+        end
         order.last_ip_address
       end
 

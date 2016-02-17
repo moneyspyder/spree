@@ -58,7 +58,6 @@ module Spree
       end
 
       def splitters(stock_location)
-        [Spree::Stock::Splitter::Backordered]
         # extension point to return custom splitters for a location
         Rails.application.config.spree.stock_splitters
       end
